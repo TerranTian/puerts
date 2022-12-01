@@ -237,4 +237,6 @@ if ( WIN32 AND NOT CYGWIN AND NOT ( CMAKE_SYSTEM_NAME STREQUAL "WindowsStore" ) 
              MSVC_RUNTIME_LIBRARY "MultiThreaded$<$<CONFIG:Debug>:Debug>")
 endif ()
 
+target_compile_definitions (puerts PRIVATE WITH_INSPECTOR)
+
 install(TARGETS puerts DESTINATION bin)
